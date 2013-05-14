@@ -1,0 +1,29 @@
+body {
+    font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'MS Pゴシック',sans-serif;
+    line-height: 1.4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: block;
+    margin: 1em;
+}
+
+div {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-size: medium;
+    font-weight: normal;
+}
+
+div {
+    margin: 1em;
+}
+
+.error {
+    color: red;
+}

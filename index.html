@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Knockout.js × CoffeeScript</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <script src="./js/jquery-1.9.1.min.js"></script>
+    <script src="./js/knockout-2.2.1.js"></script>
+    <script src="./js/app.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="echo">
+        <h1>Echo Sample</h1>
+        <p><input type="text" data-bind="value: message, valueUpdate: 'afterkeydown'"></p>
+        <p data-bind="text: message"></p>
+        <p class="error" data-bind="text: errorMessage"></p>
+    </div>
+
+    <div id="addressBook">
+        <h2>AddressBook Sample</h2>
+        <p>
+            <input type="text" value="" placeholder="First Name" data-bind="value: firstNameValue">
+            <input type="text" value="" placeholder="Last Name" data-bind="value: lastNameValue">
+            <button data-bind="click:addAddress">追加</button>
+        </p>
+
+        <ul data-bind="foreach: addressList, visible:addressList().length>0">
+            <li>
+                <span data-bind="text:fullName">Todo</span> -
+                <button data-bind="click:$root.removeAddress">削除</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
